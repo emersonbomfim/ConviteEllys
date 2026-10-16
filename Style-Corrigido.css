@@ -2,8 +2,29 @@
 body{font-family:'Baloo 2',sans-serif;background:linear-gradient(180deg,#ff7aa8 0%,#ffca3a 45%,#4cc9ff 100%);min-height:100vh;overflow-x:hidden;color:#4a2030}
 .wrapper{display:flex;justify-content:center;padding:16px;position:relative;z-index:2}
 .card{width:100%;max-width:520px;background:rgba(255,255,255,0.96);backdrop-filter:blur(10px);border-radius:32px;box-shadow:0 24px 70px rgba(255,20,90,0.35);overflow:hidden;border:4px solid #fff}
-.top-banner{position:relative;height:420px;background:#fff0f6;overflow:hidden}
-.tema-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:1;filter:saturate(1.25) contrast(1.1)}
+.top-banner{
+  position:relative;
+  width:100%;
+  aspect-ratio: 16/13;
+  min-height:340px;
+  max-height:520px;
+  height:auto;
+  background:#fff0f6;
+  overflow:hidden;
+  display:block;
+}
+.tema-img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center top;
+  opacity:1;
+  filter:saturate(1.25) contrast(1.1);
+  display:block;
+  max-width:100%;
+}
 .photo-spot{position:absolute;right:14px;bottom:14px;display:flex;flex-direction:column;align-items:center;gap:8px;z-index:3}
 .photo-frame{width:175px;height:175px;border-radius:50%;background:#fff;border:6px solid #ff2e7e;box-shadow:0 10px 28px rgba(0,0,0,0.22),0 0 0 4px #fff;overflow:hidden;position:relative}
 .photo-frame img{width:100%;height:100%;object-fit:cover;display:block}
@@ -42,10 +63,44 @@ footer{margin-top:22px;font-size:13px;color:#8a4a5e;font-weight:600}
 @media(min-width:600px){
   .wrapper{padding:28px}
   .nome{font-size:82px}
-  .top-banner{height:460px}
+  .top-banner{
+  position:relative;
+  width:100%;
+  aspect-ratio: 16/13;
+  min-height:340px;
+  max-height:520px;
+  height:auto;
+  background:#fff0f6;
+  overflow:hidden;
+  display:block;
+}
   .photo-frame{width:195px;height:195px}
   .form-row{flex-direction:row}
   .form-row input{flex:1}
 }
 
 .lista-local{display:none !important}
+
+/* ===== RESPONSIVO EXTRA PARA tema-fundo.jpg ===== */
+@media(max-width: 600px){
+  .top-banner{
+    aspect-ratio: 4/3.2;
+    min-height:300px;
+    max-height:420px;
+  }
+  .tema-img{
+    object-position:center 20%;
+  }
+}
+@media(max-width: 380px){
+  .top-banner{
+    aspect-ratio: 1/1;
+    min-height:280px;
+  }
+}
+@media(min-width: 900px){
+  .top-banner{
+    aspect-ratio: 16/11;
+    max-height:560px;
+  }
+}
