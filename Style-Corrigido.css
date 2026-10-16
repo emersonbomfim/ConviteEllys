@@ -1,0 +1,51 @@
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Baloo 2',sans-serif;background:linear-gradient(180deg,#ff7aa8 0%,#ffca3a 45%,#4cc9ff 100%);min-height:100vh;overflow-x:hidden;color:#4a2030}
+.wrapper{display:flex;justify-content:center;padding:16px;position:relative;z-index:2}
+.card{width:100%;max-width:520px;background:rgba(255,255,255,0.96);backdrop-filter:blur(10px);border-radius:32px;box-shadow:0 24px 70px rgba(255,20,90,0.35);overflow:hidden;border:4px solid #fff}
+.top-banner{position:relative;height:420px;background:#fff0f6;overflow:hidden}
+.tema-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:1;filter:saturate(1.25) contrast(1.1)}
+.photo-spot{position:absolute;right:14px;bottom:14px;display:flex;flex-direction:column;align-items:center;gap:8px;z-index:3}
+.photo-frame{width:175px;height:175px;border-radius:50%;background:#fff;border:6px solid #ff2e7e;box-shadow:0 10px 28px rgba(0,0,0,0.22),0 0 0 4px #fff;overflow:hidden;position:relative}
+.photo-frame img{width:100%;height:100%;object-fit:cover;display:block}
+.photo-tag{background:#ff2e7e;color:#fff;border-radius:20px;padding:4px 14px;font-size:13px;font-weight:800;box-shadow:0 4px 12px rgba(255,46,126,0.4)}
+.content{padding:22px 20px 28px;text-align:center}
+.nome{font-family:'Pacifico',cursive;font-size:68px;color:#ff1760;line-height:0.9;text-shadow:2px 2px 0 #fff,0 6px 18px rgba(255,23,96,0.45);letter-spacing:1px}
+.idade{font-family:'Pacifico',cursive;font-size:36px;color:#ff5c9a;margin-top:6px;font-weight:800}
+.convite-text{margin:16px 0;font-size:18px;font-weight:600;color:#6b2a3d}
+.infos{display:grid;gap:14px;margin:20px 0;text-align:left;background:#fff0f6;border-radius:20px;padding:18px;border:3px solid #ff8fba}
+.info-item{display:flex;gap:12px;align-items:flex-start;font-size:15.5px;line-height:1.35;color:#5a2635}
+.icon{font-size:22px;margin-top:2px}
+.btn-map{display:inline-flex;align-items:center;justify-content:center;width:100%;background:linear-gradient(135deg,#2b5bff,#5a8bff);color:#fff;text-decoration:none;padding:15px 18px;border-radius:18px;font-weight:800;font-size:16px;margin:12px 0 6px;transition:.2s;box-shadow:0 8px 20px rgba(43,91,255,0.4)}
+.btn-map:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(43,91,255,0.5)}
+.divider{margin:20px 0;font-size:22px}
+.rsvp{background:linear-gradient(135deg,#ffe0ec 0%,#fff7cc 100%);border-radius:24px;padding:20px;border:3px solid #ff8fba}
+.rsvp h3{font-size:24px;color:#ff1760;font-weight:800}
+.rsvp p{font-size:14.5px;margin:8px 0 14px;color:#6b2a3d}
+.form-row{display:flex;flex-direction:column;gap:10px}
+input[type=text]{width:100%;padding:15px 16px;border-radius:14px;border:3px solid #ffb1cc;outline:none;font-size:16px;font-family:'Baloo 2';background:#fff;color:#4a2030;font-weight:600}
+input[type=text]:focus{border-color:#ff1760;box-shadow:0 0 0 3px rgba(255,23,96,0.18)}
+.btn-confirm{background:linear-gradient(135deg,#ff1760,#ff6da8);color:#fff;border:none;border-radius:14px;padding:15px;font-weight:800;font-size:16px;cursor:pointer;transition:.2s;box-shadow:0 8px 18px rgba(255,23,96,0.4);letter-spacing:0.3px}
+.btn-confirm:hover{transform:scale(1.02);filter:brightness(1.05)}
+.btn-confirm:disabled{opacity:0.6;cursor:not-allowed}
+.status{margin-top:12px;font-weight:800;min-height:20px;font-size:15px}
+.status.ok{color:#1b8a3a}
+.status.err{color:#d0003a}
+.lista-local{list-style:none;margin-top:14px;text-align:left;max-height:160px;overflow:auto}
+.lista-local li{background:#fff;padding:10px 12px;border-radius:12px;margin-bottom:8px;border:2px solid #ffd0e0;font-size:14px;font-weight:600}
+footer{margin-top:22px;font-size:13px;color:#8a4a5e;font-weight:600}
+.hearts-bg{position:fixed;inset:0;pointer-events:none;z-index:1}
+.heart{position:absolute;animation:float 6s linear infinite;font-size:20px;filter:drop-shadow(0 2px 2px rgba(0,0,0,0.1))}
+@keyframes float{0%{transform:translateY(100vh) rotate(0)}100%{transform:translateY(-10vh) rotate(360deg);opacity:0}}
+#confetti{position:fixed;inset:0;pointer-events:none;z-index:10}
+.confetti-piece{position:absolute;width:10px;height:12px;animation:conf 1.2s ease-out forwards}
+@keyframes conf{0%{transform:translateY(-20px) rotate(0)}100%{transform:translateY(100vh) rotate(720deg);opacity:0}}
+@media(min-width:600px){
+  .wrapper{padding:28px}
+  .nome{font-size:82px}
+  .top-banner{height:460px}
+  .photo-frame{width:195px;height:195px}
+  .form-row{flex-direction:row}
+  .form-row input{flex:1}
+}
+
+.lista-local{display:none !important}
