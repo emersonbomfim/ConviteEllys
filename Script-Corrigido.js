@@ -1,7 +1,7 @@
 // ========= CONFIGURAÇÃO =========
 const CONFIG = {
   GOOGLE_SHEET_URL: "https://script.google.com/macros/s/AKfycbzXGQBi3Egv1yoabS_fvLLhjg-Eo_GvSwFkflVbRrqzPDXpvrp23WaZIjA8VolvCbBmoQ/exec",
-  WHATSAPP_NUMERO: "5571992751859",
+  WHATSAPP_NUMERO: "5575988239129",
   WHATSAPP_MENSAGEM: (nome) => `Olá! Eu ${nome} confirmo presença no aniversário de 1 ano da Ellys no dia 19/12 às 15h! 🎀🐑💖`
 };
 // =================================
